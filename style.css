@@ -1,15 +1,35 @@
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.red {
-    color: red;
+
+.window{
+    width: 400px;
+    height: 225px;
+    margin: 20px auto;
+    overflow: hidden;
 }
-.buttons{
-    margin: 20px;
-    text-align: center;
+
+.images {
+    position: relative;
 }
-.button{
-    margin: 50px;
+
+.images > img {
+    width: 100%;
+    transition: all 0.3s;
+    position: absolute;
+}
+
+.images > img.current{
+    left: 0;
+    transform: translateX(0);
+    z-index: 1;
+}
+.images > img.leave{
+    transform: translateX(-100%);
+    z-index: 1;
+}
+.images > img.enter{
+    transform: translateX(100%)
 }
