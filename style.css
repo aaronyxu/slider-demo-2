@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.red {
+    color: red;
+}
+.buttons{
+    margin: 20px;
+    text-align: center;
+}
+.button{
+    margin: 50px;
+}
