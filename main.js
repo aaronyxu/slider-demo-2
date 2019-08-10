@@ -1,43 +1,40 @@
-var allButtons = $('#buttons > span')
+initial()
 
-for (let i = 0; i < allButtons.length; i++) {
-  $(allButtons[i]).on('click', function(x) {
-    var index = $(x.currentTarget).index()
-    var p = index * - 800
-    $('#images').css({
-      transform: 'translate(' + p + 'px)'
-    })
-    n = index
-    activeButton(allButtons.eq(n))
+let n = 1
+setInterval(() => {
+  makeLeave($('.images > img:nth-child(' + x(n) + ')')).one('transitionend', (e) => {
+    makeEnter($(e.currentTarget))
   })
+  makeCurrent($('.images > img:nth-child(' + x(n + 1) + ')'))
+  n += 1
+}, 1000)
+
+function x(n) {
+  if (n > 4) {
+    n = n % 4
+    if (n === 0) {
+      n = 4
+    }
+  }
+  return n
 }
 
-
-
-var n = 0;
-var size = allButtons.length
-allButtons.eq(n % size).trigger('click')
-
-
-var timerId = setTimer()
-
-function setTimer() {
-  return setInterval(() => {
-    n += 1
-    allButtons.eq(n % size).trigger('click')
-  }, 3000)
+function initial() {
+  let n = 1
+  $('.images > img:nth-child(' + n + ')').addClass('current').siblings().addClass('enter')
 }
 
-function activeButton($button) {
-  $button
-    .addClass('red')
-    .siblings('.red').removeClass('red')
+function makeCurrent($node) {
+  $node.removeClass('enter leave').addClass('current')
+  return $node
 }
 
-$('.window').on('mouseenter', function() {
-  window.clearInterval(timerId)
-})
+function makeLeave($node) {
+  $node.removeClass('current enter').addClass('leave')
+  return $node
+}
 
-$('.window').on('mouseleave', function() {
-  timerId = setTimer()
-})
+function makeEnter($node) {
+  $node.removeClass('current leave').addClass('enter')
+  return $node
+}
