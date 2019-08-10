@@ -4,50 +4,25 @@
 <head>
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <meta charset="utf-8">
-    <title>JS Bin</title>
+    <title>Slider Demo</title>
     <link rel="stylesheet" href="./style.css">
-    <style>
-        .images {
-            display: flex;
-            align-items: flex-start;
-            transition: all 0.5s;
-        }
-
-        .images>img {
-            vertical-align: top;
-        }
-
-        .window {
-            width: 800px;
-            overflow: hidden;
-        }
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div>
-            <div class="window">
-                <div class="images" id=images>
-                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565364776423&di=ed58f844cbd20cf3fcb675425bbed25e&imgtype=0&src=http%3A%2F%2Fwww.leawo.cn%2Fattachment%2F201503%2F26%2F1723875_1427370150RRZo.jpg"
-                        width=800 alt="Picture 1" height=450>
-                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565364776419&di=b7df3d291eaf3a441f370c043d477c51&imgtype=0&src=http%3A%2F%2Fk.zol-img.com.cn%2Fdiybbs%2F6595%2Fa6594758_s.jpg"
-                        width=800 alt="Picture 2" height=450>
-                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565365441376&di=41f52e3136a25b71b7b80ef131c3fe2b&imgtype=0&src=http%3A%2F%2Fwww.hubei.gov.cn%2Fmlhb%2Flyms%2F201603%2FW020160317378315055425.jpg"
-                        width=800 alt="Picture 3" height=450>
-                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565365459308&di=ead575e15e51f221d6bbd04acdbc5dd3&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170517%2F48f601cf27954392aa1bf9a026537824_th.jpg"
-                        width=800 alt="Picture 4" height=450>
-                </div>
-            </div>
-            <div id="buttons" class="buttons">
-                <span class="button">Picture 1</span>
-                <span class="button">Picture 2</span>
-                <span class="button">Picture 3</span>
-                <span class="button">Picture 4</span>
-            </div>
+    <div class="window">
+        <div class="images" id=images>
+            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565364776423&di=ed58f844cbd20cf3fcb675425bbed25e&imgtype=0&src=http%3A%2F%2Fwww.leawo.cn%2Fattachment%2F201503%2F26%2F1723875_1427370150RRZo.jpg"
+                width=400 alt="Picture 1" height=225>
+            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565364776419&di=b7df3d291eaf3a441f370c043d477c51&imgtype=0&src=http%3A%2F%2Fk.zol-img.com.cn%2Fdiybbs%2F6595%2Fa6594758_s.jpg"
+                width=400 alt="Picture 2" height=225>
+            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565365441376&di=41f52e3136a25b71b7b80ef131c3fe2b&imgtype=0&src=http%3A%2F%2Fwww.hubei.gov.cn%2Fmlhb%2Flyms%2F201603%2FW020160317378315055425.jpg"
+                width=400 alt="Picture 3" height=225>
+            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565365459308&di=ead575e15e51f221d6bbd04acdbc5dd3&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170517%2F48f601cf27954392aa1bf9a026537824_th.jpg"
+                width=400 alt="Picture 4" height=225>
         </div>
-
     </div>
+
 
 
 </body>
